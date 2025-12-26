@@ -1,0 +1,8 @@
+print(1);
+
+var b = 0;
+
+def a() {
+    print(2);
+    return 1;
+}
