@@ -2,7 +2,16 @@ var x = 1;
 func f() {
     return x;
 }
+func p(x) {
+    if (x == 2) return 10;
+    else return 20;
+    return x;
+}
+func y() {}
 {
     var x = 2;
     print(f());
+    print(p(x));
+    print(p(1));
+    print(y());
 }
