@@ -103,16 +103,25 @@ pip install lark
 
 ### Run a Program
 
+Linux:
 
 ```bash
-python arthon.py < program.art
+python3 arthon.py < program.art
+```
+
+Windows:
+
+```bash
+type .\program.art | python .\arthon.py
 ```
 
 > Note: while the example shows 'program.art', truth is, you can use any extension to the file (or no extension at all), as long as it's in the format the program can read.
 
-## Possible Future Work
+## Future Work
 
-- 
+- Properly implement the Type Checker. Works but not that great.
+- Improve the grammar of the programming language.
+- Add custom error classes w\ information about where the error occurs.
 
 ## Author
 
