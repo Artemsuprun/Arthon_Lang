@@ -223,8 +223,8 @@ class Eval(Interpreter):
         self.env = old_env
     
     # function definition
-    def lambda_expr(self, x, e):
-        return Closure(x, e, self.env)
+    def lambda_expr(self, name, exprs):
+        return Closure(name, exprs, self.env)
 
     # function call
     def func_call_stmt(self, fname, args=None):
@@ -523,7 +523,7 @@ def main():
         prog = sys.stdin.read()
         tree = parser.parse(prog)
         print(prog, end="")
-        TypeCheck().visit(tree)
+        #TypeCheck().visit(tree) The type checker is currently disabled for fixing purposes
         Eval().visit(tree)
     except Exception as e:
         print(e)
